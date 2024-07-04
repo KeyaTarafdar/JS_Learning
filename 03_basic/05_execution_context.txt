@@ -1,15 +1,15 @@
 ## JS is single threaded
 
-## Execution context
+## Execution context------------------------------------------------------------------------
 1. Global execution context [this]
 2. Functional execution context
 3. Eval execution context
 
-# Js code runs in two phases: 
+# Js code runs in two phases:------------------------------------------------------------------------
 1. Memory create phase / creation phase / Memory phase
 2. Execution phase
 
-## Steps to execute a JS code:
+## Steps to execute a JS code:------------------------------------------------------------------------
 1. Global execution: The value of `this` keyword is set to Global Execution Context (which is an empty Object in NODE environment & window object in browser environment)
 2. Memory phase: During this phase, JS engine scans the code and assigns memory for the variable & initialize values for the variables , functions, etc.. For variables they are 'undefined' and for functions they are set to their function definition
 3. Execution phase: After the creation phase completed, the execution phase begins where actual values of the variables are set. And when the functions are called it creates a new 'Function Execution' context which consists of two phases (they works same as explained above but only for the particular function scope):
@@ -17,7 +17,7 @@
     2. Execution phase 
     The return value of the 'Function Execution' context is passed to the Global Execution Context.
 
-## Ex:
+## Ex:------------------------------------------------------------------------
 let val1 = 10, val2 = 5;
 function addNum (num1 , num2){
     let total = num1 + num2;
@@ -26,7 +26,7 @@ function addNum (num1 , num2){
 let result1 = addNum(val1 , val2);
 let result2 = addNum(10 , 2);
 
-## Step by step execution
+## Step by step execution------------------------------------------------------------------------
 1. Global execution => this
 2. Memory phase => [val1 = undefined, val2 = undefined, addNum = defination, result1 = undefined, result2 = undefined]
 3. Execution phase => [val1 = 10, val2 = 5, result1 = addNum => create Functional execution context(create new variable environment + execution thread)]
