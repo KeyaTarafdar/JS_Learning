@@ -4,6 +4,7 @@
 # var => global scope
 
 ## Global Scope is different in browser & node environment
+Global object in browser => Window
 */
 
 {
