@@ -1,4 +1,4 @@
-// Function declaration---------------------------------------------------
+// Function declaration------------------------------------------------------------------------
 // Method 1
 console.log(addOne(6)); //7
 function addOne(num) {
@@ -47,7 +47,7 @@ function loginUserMessage1(username = "A user") {
 console.log(loginUserMessage1("Keya")); //Keya just logged in
 console.log(loginUserMessage1()); //A user just logged in
 
-// When we don't know the number of arguments--------------------------------------
+// When we don't know the number of arguments------------------------------------------------------------------------
 // REST operator (...)
 function calculateCartPrice(...num1) {
   return num1;
@@ -60,7 +60,7 @@ function calculateCartPrice(val1, val2, ...num1) {
 }
 console.log(calculateCartPrice(100, 200, 300, 400, 500)); //[ 300, 400, 500 ]
 
-// Passing object in the function-------------------------------------------
+// Passing object in the function------------------------------------------------------------------------
 const user = {
   username: "Keya",
   price: 199,
@@ -77,7 +77,7 @@ handleObject({
   price: 299,
 });
 
-// Passing array as a parameter---------------------------------------------
+// Passing array as a parameter------------------------------------------------------------------------
 const myArray = [100, 300, 400, 600];
 function handleArray(anyArray) {
   return anyArray[2];
