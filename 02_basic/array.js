@@ -54,7 +54,7 @@ const arr4 = arr1.splice(1, 3);
 console.log(arr1); //[ 1, 5 ]
 console.log(arr4); //[ 2, 3, 4 ]
 
-//Merge to arrays-------------------------------------------------
+//Merge two arrays-------------------------------------------------
 // Method 1
 // PUSH => [Appends new elements to the end of an array, and returns the new length of the array.]
 const marvel_heroes = ["thor", "ironman", "spiderman"];
@@ -84,7 +84,7 @@ console.log(simple_array);
 // ISARRAY => [check arg is any array or not]
 console.log(Array.isArray("keya"));
 
-// String to array
+// Convertion into array-------------------------------------------------
 // FROM => [Creates an array from an iterable object.]
 console.log(Array.from("keya")); //[ 'k', 'e', 'y', 'a' ]
 console.log(Array.from({name:"keya"})); // ## Important case ## => return an empty array
