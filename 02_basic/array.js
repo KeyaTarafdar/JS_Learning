@@ -8,7 +8,7 @@
 
 */
 
-/*// Array declaration------------------------------------------
+// Array declaration------------------------------------------
 // Method 1
 const arr = [1, 2, 3, 4, 5, true, "keya"];
 console.log(arr);
@@ -52,17 +52,17 @@ console.log(arr3); //[ 2, 3 ]
 // SPLICE => [returns a section of array & last arg is included]
 const arr4 = arr1.splice(1, 3);
 console.log(arr1); //[ 1, 5 ]
-console.log(arr4); //[ 2, 3, 4 ]*/
+console.log(arr4); //[ 2, 3, 4 ]
 
 //Merge to arrays-------------------------------------------------
 // Method 1
 // PUSH => [Appends new elements to the end of an array, and returns the new length of the array.]
 const marvel_heroes = ["thor", "ironman", "spiderman"];
 const dc_heroes = ["superman", "flash", "batman"];
-/*marvel_heroes.push(dc_heroes);
+marvel_heroes.push(dc_heroes);
 console.log(marvel_heroes); //here dc_heroes array is a single elment in the marbel_heroes array
 console.log(marvel_heroes[3]); //It will print the dc_heroes array
-console.log(marvel_heroes[3][1]); //flash*/
+console.log(marvel_heroes[3][1]); //flash
 
 // Method 2
 // CONCAT => [Combines two or more arrays. This method returns a new array without modifying any existing arrays.]
