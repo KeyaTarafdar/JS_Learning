@@ -1,5 +1,5 @@
 /*
-## Falsy Value----------------
+## Falsy Value------------------------------------------------------------------------
 1. false
 2.0
 3. -0
@@ -23,19 +23,19 @@
 3. 0 == "" => true
 */
 
-// Empty array check
+// Empty array check------------------------------------------------------------------------
 const arr = [];
 if (arr.length === 0) {
   console.log("Empty array");
 }
 
-// Empty object check
+// Empty object check------------------------------------------------------------------------
 const obj = {};
 if (Object.keys(obj).length === 0) {
   console.log("Empty object");
 }
 
-// Nullish Coalescing Operator (??): null undefined [used to avoid assign null or undefined value to the variable]
+// Nullish Coalescing Operator (??): null undefined [used to avoid assign null or undefined value to the variable]------------------------------------------------------------------------
 let val1, val2, val3, val4;
 
 val1 = 5 ?? 10; //1st value will be assigned
@@ -48,6 +48,6 @@ console.log(val2); //10
 console.log(val3); //15
 console.log(val4); //10
 
-// Terniary Operator (condition ? true : false)
+// Terniary Operator (condition ? true : false)------------------------------------------------------------------------
 const iceTeaPrice = 70;
 iceTeaPrice >= 80 ? console.log(iceTeaPrice) : console.log("less than 80");
