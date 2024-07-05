@@ -12,7 +12,7 @@ console.log(myTotal);
 myTotal = myNums.reduce((acc, cur) => acc + cur, 0); //Implicit return
 console.log(myTotal);
 
-// On Array of Object
+// On Array of Object------------------------------------------------------------------------
 const shoppingCart = [
   {
     itemName: "js course",
