@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+
+    <style>
+        .bg-black{
+            background: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">Today</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
+
+<!-- 
+SELECTION METHODS------------------------------------------------------------------------
+1. getElementById()
+2. getElementByClassName()
+3. document.querySelector('tag_name || anyother selection')
+4. document.querySelector('#id_name')
+5. document.querySelector('.class_name') 
+    we can directly access querySelector element [ex: document.querySelector('.class_name').style.color='green']
+6. document.querySelectorAll('tagname || #id || .class') => [return a NodeList(It is not pure array)]
+    we can't directly access querySelector element, we can access by index [ex: document.querySelectorALL('.class_name')[0].style.color='green']
+        const tempList=document.querySelectorALL('.class_name');
+        tempList.forEach((el)=>{
+            el.style.backgroundColor = 'green';
+        })
+
+document.getElementById("title") --- [result will be the element whose id is 'title']
+    O/p => <h1 id=​"title" class=​"heading">​DOM learning​</h1>​
+document.getElementById("title").id --- [result will be the id of the element whose id is 'title']
+    O/p => 'title'
+document.getElementById("title").className --- [result will be the class of the element whose id is 'title']
+    O/p => 'heading'
+document.getElementById("title").getAttribute('id') --- [result will be the attribute id of the element whose id is 'title']
+    O/p => 'title'
+document.getElementById("title").getAttribute('class') --- [result will be the attibute class of the element whose id is 'title']
+    O/p => 'heading'
+document.getElementById("title").setAttribute('class','test') --- [the class attribute will be set to 'test' whose id is 'title']
+    O/p => undefined [<h1 id="title" class="test">DOM learning</h1>]
+
+
+const title = document.getElementById('title') --- [store the element into title variable]
+    => undefined
+title --- [print the title variable]
+    => <h1 id=​"title" class=​"test heading">​DOM learning​</h1>​
+title.style.backgroundColor = 'green' --- [set background colour]
+    => 'green'
+title.style.padding = "15px" --- [set padding]
+    => '15px'
+title.textContent --- [print all the content within the element]
+    => 'DOM learning Today'
+title.InnerText --- [print only the visible content within the element]
+    => 'DOM learning'
+title.InnerHTML --- [print all content with all the html code(eg. tags, style etc.) within the element]
+    => 'DOM learning <span style="display: none;">Today</span>'
+
+-------------------------------------------------------------------------------------------------------------------
+
+## We can iterate Node List by For-each loop but can't iterate HTML Collection
+
+## Convertion of HTML Collection into Array------------------------------------------------------------------------
+    Array.from(HTML_Collecetion_name)
+-->

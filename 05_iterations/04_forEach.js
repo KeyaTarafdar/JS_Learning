@@ -1,6 +1,7 @@
 /* 
 FOR-EACH => [Array] => It is a higher order function
-name.forEach(callback function) [Callback function doesn't have any name]
+# name.forEach(callback function) [Callback function doesn't have any name]
+# For-each loop doesn't return any value
 */
 
 // For Simple Array------------------------------------------------------------------------
@@ -45,3 +46,4 @@ myCoding.forEach((item) => {
   console.log(item);
   console.log(item.languageFileName);
 });
+
