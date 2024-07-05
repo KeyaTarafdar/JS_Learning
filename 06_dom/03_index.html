@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM => Creating element</title>
+</head>
+
+<body style="background-color: #212121;color: #fff;">
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+
+    // Adding Class & Id attribute------------------------------------------------------------------------
+    div.className = 'main'
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    // Adding custom attribute------------------------------------------------------------------------
+    div.setAttribute('title', 'genereted title')
+
+    // Styling------------------------------------------------------------------------
+    div.style.backgroundColor = 'green'
+    div.style.padding = '12px'
+
+    // Adding text------------------------------------------------------------------------
+    // Method 1
+    div.innerText = 'Created div'
+    // Method 2
+    const text = document.createTextNode('Created div')
+    div.appendChild(text)
+
+    // Attach all this created element to the document------------------------------------------------------------------------
+    document.body.appendChild(div)
+
+    /*
+    ## setAttribute() is more optimized, as it set the value directly
+    ## But className, id, innerText is not optimized, as they 1st fetch the value & then overwrite it.
+    */
+</script>
+
+</html>

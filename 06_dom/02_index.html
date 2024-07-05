@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM => Parent child Relations</title>
+</head>
+
+<body style="background-color: #212121;color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // Selecting an element as a parent------------------------------------------------------------------------
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+
+    // Parent to child------------------------------------------------------------------------
+    console.log(parent.children); //O/p => HTML Collection of all child under 'parent' class
+    console.log(parent.children[1]); //Can access 2nd child => Tuesday
+    console.log(parent.children[1].innerHTML); //Tuesday
+    for (let i = 0; i < parent.children.length; i++) { //Print all values
+        console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color = 'red' //Change style
+
+    console.log(parent.firstElementChild); //Print first child
+    console.log(parent.lastElementChild); //Print last child
+
+    // Selecting an element as a child------------------------------------------------------------------------
+    let child = document.querySelector('.day'); //select 1st element whose class is 'day'
+    console.log(child);
+
+    // Child to parent------------------------------------------------------------------------
+    console.log(child.parentElement); //Print parent element of class 'day' element
+    console.log(child.nextElementSibling); //Print next sibling element
+
+    child = document.querySelectorAll('.day') //select all element of class 'day' => Return a NodeList
+    console.log(child);
+
+    // Access all the child node of a parent------------------------------------------------------------------------
+    console.log("NODES: ", parent.childNodes); //return all the child nodes under parent
+
+</script>
+
+</html>
