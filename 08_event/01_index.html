@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body style="background-color: #414141; color: white;">
+    <h2>Amazing inages</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="http://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="http://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="japan"></li>
+            <li><img width="200px" id="river"
+                    src="http://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="river"></li>
+            <li><img width="200px" id="owl"
+                    src="http://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="owl"></li>
+            <li><img width="200px" id="prayer"
+                    src="http://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="owl"></li>
+            <li><a style="color: blue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    /*
+    Events in JS runs sequentially
+    When we create an event => an event object is created
+    */
+
+    // Adding event------------------------------------------------------------------------
+    // Method 1
+    document.getElementById('owl').onclick = function () {
+        alert('owl clicked');
+    }
+
+    // Method 2
+    /*
+    addEventListener('event_name', callback function, false[default]) => As false is default value, so most of the time we don't mention it in the addEventListener function => Represents event propagation
+    */
+    document.getElementById('owl').addEventListener('click', function () {
+        alert('owl clicked');
+    }, false)
+
+    // Method 3 => By using attachEvent() => It was used in the time of Internet Explorer
+
+    // Method 4 => onEventListener => Used in jQuery
+
+    // Event Object------------------------------------------------------------------------
+    // Important topics
+    // 1. type, timespamp, defaultPrevented
+    // 2. target, toElement, srcElement, currentTarget
+    // 3. clientX, clientY, screenX, screenY
+    // 4. altkey, ctrkey, shiftkey, keyCode
+
+    document.getElementById('owl').addEventListener('click', function (e) {
+        console.log(e);
+    })
+
+    /* Event Propagation------------------------------------------------------------------------
+    1. Event bubbling [3rd parameter: false] => Buttom to Top event flow
+    2. Event capturing [3rd parameter: true] => Top to Buttom event flow
+    */
+
+    // Event Bubbling
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log("clicked inside the ul");
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function (e) {
+        console.log("Owl clicked");
+    }, false) // When owl eill be clicked => [Owl clicked] and then [clicked inside the ul]
+
+    // Event Capturing
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log("clicked inside the ul");
+    }, true)
+
+    document.getElementById('owl').addEventListener('click', function (e) {
+        console.log("Owl clicked");
+    }, true) // When owl eill be clicked => [clicked inside the ul] and then [Owl clicked]
+
+    // Stop event propagation------------------------------------------------------------------------
+    document.getElementById('owl').addEventListener('click', function (e) {
+        console.log("Owl clicked");
+        e.stopPropagation() //Event will not be bubbled to upper element
+    }, false) // O/p => Owl clicked
+
+    // Prevent default------------------------------------------------------------------------
+    document.getElementById('google').addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log("Google clicked");
+        e.stopPropagation();
+    }, false)
+
+    // Task: When we click over an image => It will be removed------------------------------------------------------------------------
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target); //Print clicked img tag
+        console.log(e.target.parentNode); //Print parent of clicked img tag => li tag
+        console.log(e.target.tagName); //Print tagname of the clicked element
+        let removeIt = e.target.parentNode
+
+        // Method 1
+        removeIt.remove();
+
+        // Method 2
+        removeIt.parentNode.removeChild(removeIt)
+    })
+
+</script>
+
+</html>

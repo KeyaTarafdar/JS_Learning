@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Functions</title>
+</head>
+
+<body>
+    <h1>API Functions</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeOut(callback_function, time out (in mili sec)) => execute the call back funtion after specified time out
+    setTimeout(function () {
+        console.log("Keya");
+    }, 2000)
+
+    // setInterval(callback_function, time out (in mili sec)) => execute the call back funtion infinitely after specified time out
+    setInterval(function () {
+        console.log("Keya");
+    }, 2000)
+
+    // Edit element
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = 'setTimeOut & setInterval';
+    }
+    const changeMe = setTimeout(changeText, 2000)
+
+    // clearTimeout required an reference
+    // clearTimeout(changeMe) //Stop changeMe reference => changeText() will not be executed
+
+    // Task => When stop button will be clicked => the change of the h1 will not be happed
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+</script>
+
+</html>
