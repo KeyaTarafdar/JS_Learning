@@ -1,9 +1,8 @@
 let random_number = parseInt(Math.random() * 100 + 1);
-console.log(random_number);
 
 const submit = document.querySelector("#subt");
 const userIntput = document.querySelector("#guessField");
-const guessSlot = document.querySelector(".guesses");
+const prevGuess = document.querySelector(".guesses");
 const remaining = document.querySelector(".lastResult");
 const low_high = document.querySelector(".lowOrHi");
 const startOver = document.querySelector(".resultParas");
@@ -55,7 +54,7 @@ function checkGuess(guess) {
 
 function displayGuess(guess) {
   userIntput.value = "";
-  guessSlot.innerHTML += `${guess} `;
+  prevGuess.innerHTML += `${guess} `;
   attemps++;
   remaining.innerHTML = `${11 - attemps}`;
 }
@@ -76,15 +75,16 @@ function endGame() {
 
 function newGame() {
   const newGameButton = document.querySelector("#newGame");
+
   newGameButton.addEventListener("click", function (e) {
     random_number = random_number = parseInt(Math.random() * 100 + 1);
     console.log(random_number);
     preGuess = [];
-    attemps=1;
-    guessSlot.innerHTML=''
-    remaining.innerHTML=`${11-attemps}`
-    userIntput.removeAttribute('disabled')
-    startOver.removeChild(p)
+    attemps = 1;
+    prevGuess.innerHTML = "";
+    remaining.innerHTML = `${11 - attemps}`;
+    userIntput.removeAttribute("disabled");
+    startOver.removeChild(p);
     playGame = true;
   });
 }
