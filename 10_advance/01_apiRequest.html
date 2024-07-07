@@ -1,0 +1,84 @@
+<!-- 
+XMLHttpRequest => https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+readyState => https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetching from API through Ajx Request</title>
+</head>
+
+<body style="background-color: black;color: white;">
+    0 UNSENT Client has been created. open() not called yet. <br>
+    1 OPENED open() has been called. <br>
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available. <br>
+    3 LOADING Downloading; responseText holds partial data. <br>
+    4 DONE The operation is complete.
+</body>
+<script>
+    // Ajx request
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+
+    /*
+    open(method, url, async) =>	Specifies the type of request
+
+    a. method: the type of request => GET or POST
+    b. url: the server (file) location
+    c. async: true (asynchronous) or false (synchronous)
+    */
+    xhr.open('GET', requestUrl);
+
+    // The onreadystatechange property defines a function to be executed when the readyState changes.
+    xhr.onreadystatechange = function () { //when the state is changing => the function is executing
+        console.log(xhr.readyState);
+        if (xhr.readyState == 4) {
+
+            // responseText returns the text received from a server following a request being sent.
+            let data = this.responseText;
+            console.log(data);
+            console.log(typeof data); //Most of the time data comes from URL => string
+
+
+            data = JSON.parse(this.responseText); //Convert data into Json format
+            console.log(data);
+            console.log(typeof data); //O/p => Object
+
+            const image = data.avatar_url;
+            const followers = data.followers;
+
+            const div1 = document.createElement('div');
+            const div2 = document.createElement('div');
+            const img = document.createElement('img');
+            div1.appendChild(img);
+            img.src = image;
+            div2.innerText = followers;
+
+            document.body.appendChild(div1);
+            document.body.appendChild(div2);
+
+            document.body.style.margin = 'auto';
+            document.body.style.textAlign = 'center'
+            document.body.style.justifyContent = 'center'
+
+            img.style.width = '100px'
+            img.style.height = '100px'
+            img.style.borderRadius = '50px'
+            div2.style.width = '100vw'
+            div2.style.textAlign = 'center'
+
+        }
+    }
+
+    /*
+    ## To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object
+    ## Sends the request to the server (used for GET)
+    */
+    xhr.send();
+</script>
+
+</html>
