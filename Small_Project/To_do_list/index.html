@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="list">
+        <div id="head">
+            <h1>To Do List</h1>
+        </div>
+        <div id="add">
+            <button id="add_new_btn">Add New Task</button>
+        </div>
+        <div id="input">
+            <table id="input_table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Date</th>
+                    <th>Task Timing</th>
+                    <th>Task Description</th>
+                </tr>
+
+                <tr>
+                    <td><input id="task_name" type="text" placeholder="Enter task name..."></td>
+                    <td><input id="task_date" type="text" placeholder="Enter task date..."></td>
+                    <td><input id="task_timing" type="text" placeholder="Enter task timing..."></td>
+                    <td><input id="task_description" type="text" placeholder="Enter task description..."></td>
+                </tr>
+            </table>
+
+            <div id="plus">
+                <i class="fa-regular fa-plus"></i>
+            </div>
+        </div>
+        <div id="content">
+            <table id="task_table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Date</th>
+                    <th>Task Timing</th>
+                    <th>Task Description</th>
+                    <th>Done</th>
+                    <th>Remove</th>
+                </tr>
+            </table>
+        </div>
+        <div id="footer">
+            <table id="done_table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Date</th>
+                    <th>Task Timing</th>
+                    <th>Task Description</th>
+                </tr>
+            </table>
+            <table id="removed_table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Date</th>
+                    <th>Task Timing</th>
+                    <th>Task Description</th>
+                </tr>
+            </table>
+            <button id="done_task">See All Completed Task</button>
+            <button id="removed_task">See All Removed Task</button>
+        </div>
+        <button id="show_less">Show Less</button>
+    </div>
+</body>
+    
+<script src="./script.js"></script>
+
+</html>

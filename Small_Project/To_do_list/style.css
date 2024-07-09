@@ -1,0 +1,168 @@
+body {
+    text-align: center;
+    background-color: aliceblue;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#list {
+    padding-top: 2rem;
+    width: 80%;
+    background-color: rgb(245, 164, 191);
+    margin: auto;
+    height: 100vh;
+}
+
+#head {
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    color: brown;
+    height: 45px;
+    margin: auto;
+}
+
+#add {
+    margin: auto;
+    margin-top: 4rem;
+}
+
+#add button {
+    background-color: rgb(17, 198, 47);
+    color: white;
+    font-weight: bolder;
+    height: 3rem;
+    width: 15rem;
+    border-radius: 10px;
+    border: none;
+    font-size: large;
+}
+
+#add button:hover {
+    cursor: pointer;
+    font-size: larger;
+}
+
+#input {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#input input {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+#plus {
+    background-color: rgb(17, 198, 47);
+    color: white;
+    border-radius: 5px;
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plus:hover {
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#input table,
+tr,
+th,
+td {
+    padding: 10px;
+}
+
+#content table,
+tr,
+th,
+td {
+    padding: 10px;
+}
+
+#task_table {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#content table th {
+    background-color: white;
+}
+
+#footer {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#done_task {
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 7px;
+    border: none;
+    background-color: aliceblue;
+}
+
+#done_task:hover {
+    cursor: pointer;
+    font-size: medium;
+}
+
+#removed_task {
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 7px;
+    border: none;
+    background-color: aliceblue;
+}
+
+#removed_task:hover {
+    cursor: pointer;
+    font-size: medium;
+}
+
+#done_table,
+#removed_table {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    display: none;
+}
+
+#done_table th,
+#removed_table th {
+    padding: 10px;
+}
+
+#done_table th,
+td,
+#removed_table th,
+td {
+    width: 20%;
+}
+
+#show_less {
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    width: 7rem;
+    display: none;
+    margin: auto;
+    margin-top: 2rem;
+}
