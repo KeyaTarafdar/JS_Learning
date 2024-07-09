@@ -163,8 +163,9 @@ plus.addEventListener("click", function (e) {
         .addEventListener("click", function () {
           document.getElementById("removed_task").style.display = "block";
           document.getElementById("done_task").style.display = "block";
-          document.getElementById("show_less").style.display = "none";
           document.getElementById("done_table").style.display = "none";
+          document.getElementById("removed_table").style.display = "none";
+          document.getElementById("show_less").style.display = "none";
         });
   } else {
     document.getElementById('error').style.display='block'
