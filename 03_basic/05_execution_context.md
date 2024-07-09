@@ -12,7 +12,7 @@
 ## Steps to execute a JS code:------------------------------------------------------------------------
 1. Global execution: The value of `this` keyword is set to Global Execution Context (which is an empty Object in NODE environment & window object in browser environment)
 2. Memory phase: During this phase, JS engine scans the code and assigns memory for the variable & initialize values for the variables , functions, etc.. For variables they are 'undefined' and for functions they are set to their function definition
-3. Execution phase: After the creation phase completed, the execution phase begins where actual values of the variables are set. And when the functions are called it creates a new 'Function Execution' context which consists of two phases (they works same as explained above but only for the particular function scope):
+3. Execution phase: After the creation phase completed, the execution phase begins where actual values of the variables are set. And when the functions are called it creates a new 'Functional Execution' context which consists of two phases (they works same as explained above but only for the particular function scope):
     1. Memory phase 
     2. Execution phase 
     The return value of the 'Function Execution' context is passed to the Global Execution Context.

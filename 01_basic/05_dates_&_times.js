@@ -7,21 +7,20 @@ JS data object repesents a single moment in time in a platform-independent Forma
 let myDate = new Date();
 console.log(typeof myDate); //Object
 
-//Data method--------------------------------------------------------
+//Date method--------------------------------------------------------
 console.log(myDate); //2024-07-03T17:35:52.893Z
 console.log(myDate.toString()); //Wed Jul 03 2024 23:05:52 GMT+0530 (India Standard Time)
 console.log(myDate.toLocaleString()); //3/7/2024, 11:07:49 pm
-console.log(myDate.toLocaleString("default", {
+console.log(
+  myDate.toLocaleString("default", {
     weekday: "short", //Wed
     weekday: "long", //Wednesday
-    weekday:'narrow' //W
+    weekday: "narrow", //W
   })
 ); //Costomization of output
 console.log(myDate.toDateString()); //Wed Jul 03 2024
 console.log(myDate.toLocaleDateString()); //3/7/2024
 console.log(myDate.toISOString()); //2024-07-03T17:37:03.085Z
-
-
 
 //Creation of date----------------------------------------------------
 //Date(year,month,day,hour,minute)
@@ -46,4 +45,4 @@ let date3 = new Date("09-04-2003"); //Here months starts with 1
 let myTimeStamp = Date.now();
 console.log(myTimeStamp); //print milisecond
 console.log(date3.getTime()); //convert date into time
-console.log(Math.floor(myTimeStamp/1000)); //convert into second from ms
+console.log(Math.floor(myTimeStamp / 1000)); //convert into second from ms

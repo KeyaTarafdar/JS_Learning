@@ -1,6 +1,6 @@
 // Object literals--------------------------------------------------------------------
 
-const mySym = Symbol("key1");
+const mySym = Symbol();
 
 const jsUser = {
   //Non-singleton object
@@ -127,5 +127,5 @@ const course = {
 const { courseInstructor } = course;
 console.log(courseInstructor);
 // Method 2
-const { courseInstructor:instructor } = course;
+const { courseInstructor: instructor } = course;
 console.log(instructor);

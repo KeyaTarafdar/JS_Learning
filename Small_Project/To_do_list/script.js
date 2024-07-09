@@ -3,14 +3,10 @@ const task_done = [];
 const task_removed = [];
 
 // Add New Task------------------------------------------------------------------------
-add_new.addEventListener("click", function (e) {
+add_new.addEventListener("click", () => {
   document.querySelector("#add").style.display = "none";
   document.querySelector("#input").style.display = "block flex";
-
-  document.getElementById("task_name").value = "";
-  document.getElementById("task_date").value = "";
-  document.getElementById("task_timing").value = "";
-  document.getElementById("task_description").value = "";
+  document.querySelectorAll("#task_name, #task_date, #task_timing, #task_description").forEach(input => input.value = "");
 });
 
 // Plus(+) Button------------------------------------------------------------------------

@@ -12,3 +12,8 @@ Here is what happens behind the scene when the new keyword is used:
 3. The constructor is called: the constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value. 
 
 4. The new object is returned: after the constructor function has been called, if it doesn't return a non-primitive value (object, array, function etc.) the newly created object is returned.
+
+
+
+## Prototype
+- In JavaScript, every object has a prototype property, which points to another object. This prototype object contains properties and methods that are shared by all objects that inherit from it. When you create a new object, it automatically inherits the properties and methods of its prototype.

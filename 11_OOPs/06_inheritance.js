@@ -22,7 +22,7 @@ Object.setPrototypeOf(TeachingSupport, Teacher); //TeachingSupport inharites pro
 
 // Task: Want to know the true length of any string (counting the length without space)------------------------------------------------------------------------
 let myName = "Keya           ";
-String.prototype.trueLength = function (str) {
+String.prototype.trueLength = function () {
   console.log(`${this}`);
   console.log(`True length is ${this.trim().length}`);
 };

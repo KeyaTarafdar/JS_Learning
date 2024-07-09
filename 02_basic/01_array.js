@@ -56,7 +56,7 @@ console.log(arr4); //[ 2, 3, 4 ]
 
 //Merge two arrays-------------------------------------------------
 // Method 1
-// PUSH => [Appends new elements to the end of an array, and returns the new length of the array.]
+// PUSH => [Appends new array to the end of an array, and returns the new length of the array.]
 const marvel_heroes = ["thor", "ironman", "spiderman"];
 const dc_heroes = ["superman", "flash", "batman"];
 marvel_heroes.push(dc_heroes);

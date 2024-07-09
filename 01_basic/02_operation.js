@@ -1,7 +1,7 @@
 //Negate-----------
 let value = 3;
 let negValue = -value;
-// console.log(negValue);
+console.log(negValue); //-3
 
 // Arithmatic operator---------
 console.log(2 + 2);
@@ -34,13 +34,14 @@ counter++; //++counter
 console.log(counter);
 
 // ##################### Comparison operator #######################
+// [In the case of comparison check between a string and number => Js converts the string to the number & the perform the operation]
 console.log(2 > 1); //true
 console.log(2 >= 1); //true
 console.log(2 < 1); //false
 console.log(2 == 1); //false
 console.log(2 != 1); //true
 
-console.log("2" > 1); //true
+console.log("2" > 1); //true [in this case JS will convert "2" to 2 => JS will convert string to number]
 console.log("02" > 1); //true
 
 console.log(null > 0); //false
@@ -58,4 +59,4 @@ console.log("2" === 2); //false
 // Symbol----------[It makes every value unique]
 const id1 = Symbol("123");
 const id2 = Symbol("123");
-console.log(id1==id2); //false
+console.log(id1 == id2); //false

@@ -77,7 +77,7 @@ const promise_4 = new Promise((resolve, reject) => {
 async function consumePromise_4() {
   //async keyword is used to declare an asynchronous function
   try {
-    //Will be executed is resolved is called
+    //Will be executed if resolved is called
     const response_4 = await promise_4; //await keyword is used to wait for a promise to be resolved before continuing with the execution of the function.
     console.log(response_4);
   } catch (error) {
@@ -88,7 +88,7 @@ async function consumePromise_4() {
 consumePromise_4();
 
 // Real life example------------------------------------------------------------------------
-// By uusing async function()
+// By using async function()
 async function getAllUsers() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");

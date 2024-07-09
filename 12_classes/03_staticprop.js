@@ -12,6 +12,7 @@ class User {
     return `123`;
   }
 }
+console.log(User.createId()); //static method access approach
 
 const user1 = new User("Keya");
 
@@ -23,4 +24,4 @@ class Teacher extends User {
 }
 
 const teacher1 = new Teacher("Priya", "priya@gmail.com");
-console.log(teacher1.createId());
+// console.log(teacher1.createId());

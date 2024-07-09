@@ -17,7 +17,7 @@ const user1 = new User("keya@gmail.com", "123");
 console.log(user1.password);
 
 /*
-In this above case will will get the error => [Maximum call stack size exceeded]
+In this above case we will get the error => [Maximum call stack size exceeded]
 
 ## As constructor is setting the values & setter method is also setting the value
 

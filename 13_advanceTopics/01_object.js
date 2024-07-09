@@ -1,4 +1,4 @@
-// Why we can;t change PI value in JS------------------------------------------------------------------------
+// Why we cant change PI value in JS------------------------------------------------------------------------
 // Object.getOwnPropertyDescriptor(Object name, 'Property of the specefied object')
 
 const descripter = Object.getOwnPropertyDescriptor(Math, "PI");

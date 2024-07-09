@@ -14,4 +14,4 @@ Object.prototype.fun=function(){
 }
 
 heroPower.fun(); //As heroPower is an Array & Array is an Object => so fun() is also present in myHero
-heroPower.fun();
+myHeros.fun();
