@@ -27,6 +27,8 @@ plus.addEventListener("click", function (e) {
   const task_table = document.querySelector("#task_table");
 
   if (task_name && task_date && task_timing && task_description) {
+    document.getElementById("error").style.display = "none";
+
     const tr = document.createElement("tr");
 
     task_table.appendChild(tr);
@@ -116,15 +118,6 @@ plus.addEventListener("click", function (e) {
       done_flag = "no_new_done";
 
       document.getElementById("show_less").style.display = "block";
-
-      document
-        .getElementById("show_less")
-        .addEventListener("click", function () {
-          document.getElementById("removed_task").style.display = "block";
-          document.getElementById("done_task").style.display = "block";
-          document.getElementById("show_less").style.display = "none";
-          document.getElementById("done_table").style.display = "none";
-        });
     });
 
     // Show Removed Tasks------------------------------------------------------------------------
@@ -162,21 +155,18 @@ plus.addEventListener("click", function (e) {
         removed_flag = "no_new_remove";
 
         document.getElementById("show_less").style.display = "block";
-
-        document
-          .getElementById("show_less")
-          .addEventListener("click", function () {
-            document.getElementById("removed_task").style.display = "block";
-            document.getElementById("done_task").style.display = "block";
-            document.getElementById("show_less").style.display = "none";
-            document.getElementById("removed_table").style.display = "none";
-          });
       });
-  } else {
-    const error = document.createElement("div");
-    error.innerText = "Please enter valid Task Details!!";
-    error.style.color = "red";
 
-    document.getElementById("input").after(error);
+      // Show less------------------------------------------------------------------------
+      document
+        .getElementById("show_less")
+        .addEventListener("click", function () {
+          document.getElementById("removed_task").style.display = "block";
+          document.getElementById("done_task").style.display = "block";
+          document.getElementById("show_less").style.display = "none";
+          document.getElementById("done_table").style.display = "none";
+        });
+  } else {
+    document.getElementById('error').style.display='block'
   }
 });
